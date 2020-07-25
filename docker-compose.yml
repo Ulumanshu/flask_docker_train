@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+
+ flask_server:
+  container_name: flask_server
+  ports:
+    - 8000:5000 #jupyterhub
+  build:
+    context: ./
+    dockerfile: Dockerfile
+  user: root
+  restart: always
+  volumes:
+    - ./:/flask_docker/
+  
