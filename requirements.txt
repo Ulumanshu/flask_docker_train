@@ -9,6 +9,7 @@ distlib==0.3.0
 distro==1.4.0
 docker==4.2.2
 Flask==1.1.2
+Flask-MySQLdb==0.2.0
 html5lib==1.0.1
 idna==2.10
 ipaddr==2.2.0
@@ -17,6 +18,7 @@ Jinja2==2.11.2
 lockfile==0.12.2
 MarkupSafe==1.1.1
 msgpack==0.6.2
+mysqlclient==2.0.1
 packaging==20.3
 pep517==0.8.2
 progress==1.5
