@@ -9,6 +9,7 @@ USER root
 
 RUN apt-get update && apt-get upgrade -yq
 RUN apt-get install -yq \
+    libmysqlclient-dev\
     curl \
     git \   
     python3.8 \
