@@ -7,8 +7,8 @@ LABEL maintainer "SDA train"
 
 USER root
 
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y \
+RUN apt-get update && apt-get upgrade -yq
+RUN apt-get install -yq \
     curl \
     git \   
     python3.8 \
