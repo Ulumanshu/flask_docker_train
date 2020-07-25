@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+    function page_loaded() {
+    }
+    var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    console.log($SCRIPT_ROOT);
+    </script>
+    {% if title %}
+        <title>Flask_Docker - {{ title }}</title>
+    {% else %}
+        <title>Flask_Docker</title>
+    {% endif %}
+</head>
+<body>
+    <div>
+        <div>
+            <nav>
+                <ul>
+                <li role="presentation" ><a href="/Home"> HOME </a></li>
+                <li role="presentation" ><a href="/About" > ABOUT </a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <center>
+    {% block content %}
+    {% endblock content %}
+    <footer class="footer">
+    
+    </footer>
+    </center>
+</body>
+</html>
